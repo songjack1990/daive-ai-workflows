@@ -1,63 +1,73 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Daive AI Studio：改善 AI 人物塑膠皮膚、服裝編輯、ComfyUI 工作流程與本地低成本製作。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Daive AI Studio：AI人物真實感、服裝編輯、ComfyUI工作流程及本地AI低成本製作。">
 <meta name="theme-color" content="#071326">
-<title>Daive AI Studio｜讓 AI 作品更真實、更有效率</title>
+<title>Daive AI Studio | AI 實用解決方案</title>
+
 <style>
 :root{
- --bg:#071326;--panel:#10213b;--ink:#f4f7ff;
- --muted:#b3c2d9;--line:#263d5e;
- --cyan:#55d9ef;--blue:#7899ff;--max:1160px
+--bg:#071326;
+--panel:#10213b;
+--ink:#f4f7ff;
+--muted:#b3c2d9;
+--line:#263d5e;
+--cyan:#55d9ef;
+--blue:#7899ff;
+--max:1160px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- margin:0;background:radial-gradient(ellipse at 78% 0%,#183967 0,transparent 34%),var(--bg);
- color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif
+margin:0;
+background:radial-gradient(ellipse at 78% 0%,#183967 0,transparent 34%),var(--bg);
+color:var(--ink);
+font:16px/1.7 system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif;
 }
 a{color:inherit;text-decoration:none}
 .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
 header{
- display:flex;align-items:center;justify-content:space-between;
- gap:20px;padding:20px 0;border-bottom:1px solid var(--line)
+display:flex;align-items:center;justify-content:space-between;
+gap:20px;padding:20px 0;border-bottom:1px solid var(--line)
 }
 .logo{font-size:19px;font-weight:900;letter-spacing:.12em;white-space:nowrap}
 .logo span{color:var(--cyan)}
 nav{display:flex;gap:23px;align-items:center;color:var(--muted);font-size:14px}
 nav a:hover{color:white}
 .lang{
- border:1px solid #496487;background:#102541;color:white;
- border-radius:10px;padding:8px 13px;cursor:pointer;font-weight:800
+border:1px solid #496487;background:#102541;color:white;
+border-radius:10px;padding:8px 15px;cursor:pointer;font-weight:800;
+font-size:14px;white-space:nowrap
 }
 .hero{
- padding:72px 0 58px;display:grid;
- grid-template-columns:1.08fr .92fr;gap:38px;align-items:center
+padding:72px 0 58px;display:grid;
+grid-template-columns:1.08fr .92fr;gap:38px;align-items:center
 }
 .kicker{font-size:12px;letter-spacing:.2em;color:var(--cyan);font-weight:800}
 h1{font-size:clamp(38px,5.5vw,64px);line-height:1.15;letter-spacing:-.04em;margin:16px 0}
 h1 em{
- font-style:normal;background:linear-gradient(90deg,var(--cyan),#9d91ff);
- -webkit-background-clip:text;background-clip:text;color:transparent
+font-style:normal;background:linear-gradient(90deg,var(--cyan),#9d91ff);
+-webkit-background-clip:text;background-clip:text;color:transparent
 }
 .lead{font-size:18px;color:var(--muted);max-width:660px}
 .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
 .btn{
- display:inline-flex;align-items:center;justify-content:center;
- padding:12px 19px;border-radius:12px;font-weight:800;
- background:linear-gradient(110deg,var(--cyan),#8ca5ff);color:#061326
+display:inline-flex;align-items:center;justify-content:center;
+padding:12px 19px;border-radius:12px;font-weight:800;
+background:linear-gradient(110deg,var(--cyan),#8ca5ff);color:#061326
 }
 .btn.secondary{background:#112744;border:1px solid #486384;color:white}
 .hero-image{
- min-height:370px;border-radius:22px;overflow:hidden;
- border:1px solid #426080;box-shadow:0 25px 70px #0008;position:relative
+min-height:370px;border-radius:22px;overflow:hidden;
+border:1px solid #426080;box-shadow:0 25px 70px #0008;position:relative
 }
 .hero-image img{width:100%;height:370px;object-fit:cover;display:block}
 .hero-image:after{
- content:"";position:absolute;inset:45% 0 0;
- background:linear-gradient(transparent,#071326b8)
+content:"";position:absolute;inset:45% 0 0;
+background:linear-gradient(transparent,#071326b8)
 }
 .hero-label{position:absolute;z-index:1;bottom:18px;left:20px;font-size:13px;letter-spacing:.12em;font-weight:800}
 .section{padding:62px 0;border-top:1px solid var(--line)}
@@ -79,8 +89,8 @@ h1 em{
 .about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
 .note{background:#112541;border:1px solid var(--line);border-radius:17px;padding:23px;color:var(--muted)}
 .cta{
- padding:32px;border-radius:21px;background:linear-gradient(110deg,#1d3967,#10404c);
- border:1px solid #466b92;display:flex;align-items:center;justify-content:space-between;gap:20px
+padding:32px;border-radius:21px;background:linear-gradient(110deg,#1d3967,#10404c);
+border:1px solid #466b92;display:flex;align-items:center;justify-content:space-between;gap:20px
 }
 .cta h2{margin:0 0 7px}
 .cta p{margin:0;color:#d3e1f3}
@@ -88,261 +98,284 @@ footer{padding:28px 0 35px;margin-top:55px;border-top:1px solid var(--line);font
 footer a{margin-right:17px}
 .small{font-size:12px;color:#879ab8;margin-top:13px}
 @media(max-width:760px){
- .hero{grid-template-columns:1fr;padding:48px 0}
- .hero-image img{height:250px}
- .grid,.steps,.about{grid-template-columns:1fr}
- .card img{height:220px}
- nav{gap:11px}
- nav a:nth-child(2),nav a:nth-child(3){display:none}
- .wrap{width:calc(100% - 28px)}
- .cta{display:block}
- .cta .btn{margin-top:18px}
- header{flex-wrap:wrap}
+.hero{grid-template-columns:1fr;padding:48px 0}
+.hero-image img{height:250px}
+.grid,.steps,.about{grid-template-columns:1fr}
+.card img{height:220px}
+nav{gap:11px}
+nav a:nth-child(2),nav a:nth-child(3){display:none}
+.wrap{width:calc(100% - 28px)}
+.cta{display:block}
+.cta .btn{margin-top:18px}
+header{flex-wrap:wrap}
 }
 </style>
 </head>
+
 <body>
 <div class="wrap">
+
 <header>
- <a class="logo" href="index.html">DAIVE <span>AI</span> STUDIO</a>
- <nav>
-  <a href="#solutions" data-t="nav1">解決方案</a>
-  <a href="#process" data-t="nav2">工作流程</a>
-  <a href="#about" data-t="nav3">關於我們</a>
-  <a href="#contact" data-t="nav4">聯絡</a>
- </nav>
- <button class="lang" id="langBtn" type="button">EN</button>
+<a class="logo" href="index.html">DAIVE <span>AI</span> STUDIO</a>
+
+<nav>
+<a href="#solutions" data-zh="解決方案" data-en="Solutions">解決方案</a>
+<a href="#process" data-zh="工作流程" data-en="Workflow">工作流程</a>
+<a href="#about" data-zh="關於我們" data-en="About">關於我們</a>
+<a href="#contact" data-zh="聯絡" data-en="Contact">聯絡</a>
+</nav>
+
+<button class="lang" id="langBtn" type="button">EN</button>
 </header>
+
 <main>
+
 <section class="hero">
- <div>
-  <div class="kicker">MAKE AI LOOK REAL · MAKE AI WORK BETTER</div>
-  <h1>告別 AI 塑膠臉，<br><em>讓 AI 作品更接近真實。</em></h1>
-  <p class="lead" data-t="lead">從人物皮膚細節、服裝編輯，到 ComfyUI 工作流程優化。解決 AI 製作中的不自然、反覆抽圖、配置錯誤與高成本問題。優先採用免費本地工具，讓製作更穩定、更有效率。</p>
-  <div class="actions">
-   <a class="btn" href="#solutions" data-t="cta1">探索實作解決方案</a>
-   <a class="btn secondary" href="mailto:songjack1990@gmail.com?subject=Daive%20AI%20Project%20Inquiry" data-t="cta2">聯絡我們</a>
-  </div>
-  <p class="small" data-t="micro">以實際問題為起點，先確認設備、工具與需求，再評估可行方案。</p>
- </div>
- <div class="hero-image">
-  <img src="images/skin.jpg" alt="自然真實的 AI 人物皮膚紋理示範">
-  <div class="hero-label">REAL SKIN TEXTURE · NATURAL DETAILS</div>
- </div>
+<div>
+<div class="kicker">MAKE AI LOOK REAL · MAKE AI WORK BETTER</div>
+
+<h1>
+<span data-zh="告別 AI 塑膠臉，" data-en="Beyond Artificial AI Faces,">告別 AI 塑膠臉，</span><br>
+<em data-zh="讓 AI 作品更接近真實。" data-en="Make AI Look More Real.">讓 AI 作品更接近真實。</em>
+</h1>
+
+<p class="lead"
+data-zh="從人物皮膚細節、服裝編輯，到 ComfyUI 工作流程優化。解決 AI 製作中的不自然、反覆抽圖、配置錯誤與高成本問題。優先採用免費本地工具，讓製作更穩定、更有效率。"
+data-en="From realistic skin details and clothing edits to ComfyUI workflow optimization. We solve unnatural results, repeated generations, configuration errors and high production costs. We prioritize free local tools where practical.">
+從人物皮膚細節、服裝編輯，到 ComfyUI 工作流程優化。解決 AI 製作中的不自然、反覆抽圖、配置錯誤與高成本問題。優先採用免費本地工具，讓製作更穩定、更有效率。
+</p>
+
+<div class="actions">
+<a class="btn" href="#solutions" data-zh="探索實作解決方案" data-en="Explore Solutions">探索實作解決方案</a>
+<a class="btn secondary" href="mailto:songjack1990@gmail.com?subject=Daive%20AI%20Project%20Inquiry" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</a>
+</div>
+
+<p class="small"
+data-zh="以實際問題為起點，先確認設備、工具與需求，再評估可行方案。"
+data-en="We start with your actual problem and review your hardware, tools and goals before proposing a practical solution.">
+以實際問題為起點，先確認設備、工具與需求，再評估可行方案。
+</p>
+</div>
+
+<div class="hero-image">
+<img src="skin.jpg" alt="Realistic AI skin texture">
+<div class="hero-label">REAL SKIN TEXTURE · NATURAL DETAILS</div>
+</div>
 </section>
+
 <section class="section" id="solutions">
- <div class="kicker">PRACTICAL AI SOLUTIONS</div>
- <h2 data-t="solTitle">你遇到的 AI 製作難題，我們逐項拆解</h2>
- <p class="sub" data-t="solSub">不只展示生成結果，更重視如何改善問題、減少試錯，讓流程真正能夠使用。</p>
+<div class="kicker">PRACTICAL AI SOLUTIONS</div>
 
- <div class="grid">
-  <article class="card">
-   <img src="images/skin.jpg" alt="AI 人物自然皮膚與真實紋理">
-   <div class="card-body">
-    <div class="num">01 / REALISTIC AI PORTRAIT</div>
-    <h3 data-t="c1t">AI 人物真實感修復</h3>
-    <p data-t="c1p">改善 AI 塑膠皮膚、假面感、過度磨皮、五官失真與皮膚紋理不自然，讓人物畫面更接近真實攝影。</p>
-    <div class="tags">
-     <span class="tag" data-t="c1a">自然毛孔</span>
-     <span class="tag" data-t="c1b">真實膚質</span>
-     <span class="tag" data-t="c1c">減少 AI 味</span>
-    </div>
-   </div>
-  </article>
+<h2 data-zh="你遇到的 AI 製作難題，我們逐項拆解"
+data-en="Practical Solutions to Your AI Challenges">
+你遇到的 AI 製作難題，我們逐項拆解
+</h2>
 
-  <article class="card">
-   <img src="images/clothing.jpg" alt="人物服裝與布料細節編輯">
-   <div class="card-body">
-    <div class="num">02 / CHARACTER & FASHION EDITING</div>
-    <h3 data-t="c2t">AI 人物與服裝精細編輯</h3>
-    <p data-t="c2p">改善換裝不自然、布料紋理失真、衣服褶皺錯誤、人物比例不協調與光影不一致。</p>
-    <div class="tags">
-     <span class="tag" data-t="c2a">服裝細節</span>
-     <span class="tag" data-t="c2b">比例協調</span>
-     <span class="tag" data-t="c2c">自然融合</span>
-    </div>
-   </div>
-  </article>
+<p class="sub"
+data-zh="不只展示生成結果，更重視如何改善問題、減少試錯，讓流程真正能夠使用。"
+data-en="More than impressive demos. We focus on improving results, reducing trial and error, and building workflows that actually work.">
+不只展示生成結果，更重視如何改善問題、減少試錯，讓流程真正能夠使用。
+</p>
 
-  <article class="card">
-   <img src="images/workflow.jpg" alt="ComfyUI 節點式 AI 工作流程">
-   <div class="card-body">
-    <div class="num">03 / COMFYUI WORKFLOW</div>
-    <h3 data-t="c3t">ComfyUI 工作流程優化</h3>
-    <p data-t="c3p">處理 AI 臉部效果不佳、節點報錯、模型配置、參數調整、顯存限制與反覆抽圖等問題。</p>
-    <div class="tags">
-     <span class="tag" data-t="c3a">節點排錯</span>
-     <span class="tag" data-t="c3b">參數優化</span>
-     <span class="tag" data-t="c3c">減少試錯</span>
-    </div>
-   </div>
-  </article>
+<div class="grid">
 
-  <article class="card">
-   <img src="images/local-ai.jpg" alt="本地 AI 工作站與低成本製作環境">
-   <div class="card-body">
-    <div class="num">04 / LOCAL AI & COST CONTROL</div>
-    <h3 data-t="c4t">免費本地化與低成本製作</h3>
-    <p data-t="c4p">優先評估免費工具與本地模型，減少雲端積分、訂閱費和重複生成造成的成本浪費。</p>
-    <div class="tags">
-     <span class="tag" data-t="c4a">本地運行</span>
-     <span class="tag" data-t="c4b">降低成本</span>
-     <span class="tag" data-t="c4c">設備評估</span>
-    </div>
-   </div>
-  </article>
- </div>
+<article class="card">
+<img src="skin.jpg" alt="Realistic AI portrait skin texture">
+<div class="card-body">
+<div class="num">01 / REALISTIC AI PORTRAIT</div>
+<h3 data-zh="AI 人物真實感修復" data-en="Realistic AI Portrait Refinement">AI 人物真實感修復</h3>
+<p data-zh="改善 AI 塑膠皮膚、假面感、過度磨皮、五官失真與皮膚紋理不自然，讓人物畫面更接近真實攝影。"
+data-en="Improve plastic-looking skin, artificial faces, excessive smoothing, distorted features and unnatural skin textures for more photographic results.">
+改善 AI 塑膠皮膚、假面感、過度磨皮、五官失真與皮膚紋理不自然，讓人物畫面更接近真實攝影。
+</p>
+<div class="tags">
+<span class="tag" data-zh="自然毛孔" data-en="Natural Pores">自然毛孔</span>
+<span class="tag" data-zh="真實膚質" data-en="Realistic Skin">真實膚質</span>
+<span class="tag" data-zh="減少 AI 味" data-en="Less AI Look">減少 AI 味</span>
+</div>
+</div>
+</article>
+
+<article class="card">
+<img src="clothing.jpg" alt="AI clothing editing">
+<div class="card-body">
+<div class="num">02 / CHARACTER & FASHION EDITING</div>
+<h3 data-zh="AI 人物與服裝精細編輯" data-en="AI Character & Clothing Editing">AI 人物與服裝精細編輯</h3>
+<p data-zh="改善換裝不自然、布料紋理失真、衣服褶皺錯誤、人物比例不協調與光影不一致。"
+data-en="Improve unnatural outfit changes, distorted fabric textures, incorrect folds, body proportions and inconsistent lighting.">
+改善換裝不自然、布料紋理失真、衣服褶皺錯誤、人物比例不協調與光影不一致。
+</p>
+<div class="tags">
+<span class="tag" data-zh="服裝細節" data-en="Clothing Details">服裝細節</span>
+<span class="tag" data-zh="比例協調" data-en="Better Proportions">比例協調</span>
+<span class="tag" data-zh="自然融合" data-en="Natural Blending">自然融合</span>
+</div>
+</div>
+</article>
+
+<article class="card">
+<img src="workflow.jpg" alt="ComfyUI workflow">
+<div class="card-body">
+<div class="num">03 / COMFYUI WORKFLOW</div>
+<h3 data-zh="ComfyUI 工作流程優化" data-en="ComfyUI Workflow Optimization">ComfyUI 工作流程優化</h3>
+<p data-zh="處理 AI 臉部效果不佳、節點報錯、模型配置、參數調整、顯存限制與反覆抽圖等問題。"
+data-en="Troubleshoot poor AI face results, node errors, model setup, parameter tuning, VRAM limits and repeated generations.">
+處理 AI 臉部效果不佳、節點報錯、模型配置、參數調整、顯存限制與反覆抽圖等問題。
+</p>
+<div class="tags">
+<span class="tag" data-zh="節點排錯" data-en="Node Troubleshooting">節點排錯</span>
+<span class="tag" data-zh="參數優化" data-en="Parameter Tuning">參數優化</span>
+<span class="tag" data-zh="減少試錯" data-en="Less Trial & Error">減少試錯</span>
+</div>
+</div>
+</article>
+
+<article class="card">
+<img src="local-ai.jpg" alt="Local AI workstation">
+<div class="card-body">
+<div class="num">04 / LOCAL AI & COST CONTROL</div>
+<h3 data-zh="免費本地化與低成本製作" data-en="Free Local AI & Cost Control">免費本地化與低成本製作</h3>
+<p data-zh="優先評估免費工具與本地模型，減少雲端積分、訂閱費和重複生成造成的成本浪費。"
+data-en="Prioritize free tools and local models where suitable, reducing cloud credits, subscription fees and wasted generations.">
+優先評估免費工具與本地模型，減少雲端積分、訂閱費和重複生成造成的成本浪費。
+</p>
+<div class="tags">
+<span class="tag" data-zh="本地運行" data-en="Local Execution">本地運行</span>
+<span class="tag" data-zh="降低成本" data-en="Lower Costs">降低成本</span>
+<span class="tag" data-zh="設備評估" data-en="Hardware Assessment">設備評估</span>
+</div>
+</div>
+</article>
+
+</div>
 </section>
 
 <section class="section" id="process">
- <div class="kicker">HOW WE WORK</div>
- <h2 data-t="processTitle">先找出問題，再決定怎麼處理</h2>
- <p class="sub" data-t="processSub">避免盲目下載模型、安裝節點或反覆抽圖。先確認目前環境與目標，再制定可執行的處理步驟。</p>
- <div class="steps">
-  <div class="step">
-   <b data-t="s1t">01 · 提供問題與目標</b>
-   <p data-t="s1p">描述想要的效果、目前使用的工具、設備配置，並附上截圖或錯誤訊息。</p>
-  </div>
-  <div class="step">
-   <b data-t="s2t">02 · 評估可行方案</b>
-   <p data-t="s2p">檢查模型、軟體版本、顯存與工作流程限制，確認處理範圍。</p>
-  </div>
-  <div class="step">
-   <b data-t="s3t">03 · 實作、測試與交付</b>
-   <p data-t="s3p">依確認內容進行製作、設定或排錯，並提供必要的操作說明。</p>
-  </div>
- </div>
+<div class="kicker">HOW WE WORK</div>
+
+<h2 data-zh="先找出問題，再決定怎麼處理"
+data-en="Find the Problem Before Changing the Setup">
+先找出問題，再決定怎麼處理
+</h2>
+
+<p class="sub"
+data-zh="避免盲目下載模型、安裝節點或反覆抽圖。先確認目前環境與目標，再制定可執行的處理步驟。"
+data-en="Avoid blindly downloading models, installing nodes or generating repeatedly. Review your setup and target first, then define practical steps.">
+避免盲目下載模型、安裝節點或反覆抽圖。先確認目前環境與目標，再制定可執行的處理步驟。
+</p>
+
+<div class="steps">
+<div class="step">
+<b data-zh="01 · 提供問題與目標" data-en="01 · Share Your Issue and Goal">01 · 提供問題與目標</b>
+<p data-zh="描述想要的效果、目前使用的工具、設備配置，並附上截圖或錯誤訊息。"
+data-en="Describe your target result, tools and hardware. Include screenshots or error messages.">
+描述想要的效果、目前使用的工具、設備配置，並附上截圖或錯誤訊息。
+</p>
+</div>
+
+<div class="step">
+<b data-zh="02 · 評估可行方案" data-en="02 · Assess a Workable Solution">02 · 評估可行方案</b>
+<p data-zh="檢查模型、軟體版本、顯存與工作流程限制，確認處理範圍。"
+data-en="Review models, software versions, VRAM and workflow limitations to define the scope.">
+檢查模型、軟體版本、顯存與工作流程限制，確認處理範圍。
+</p>
+</div>
+
+<div class="step">
+<b data-zh="03 · 實作、測試與交付" data-en="03 · Implement, Test and Deliver">03 · 實作、測試與交付</b>
+<p data-zh="依確認內容進行製作、設定或排錯，並提供必要的操作說明。"
+data-en="Carry out the agreed production, setup or troubleshooting and provide essential instructions.">
+依確認內容進行製作、設定或排錯，並提供必要的操作說明。
+</p>
+</div>
+</div>
 </section>
 
 <section class="section about" id="about">
- <div>
-  <div class="kicker">ABOUT DAIVE</div>
-  <h2 data-t="aboutTitle">讓 AI 不只看起來厲害，而是真的派得上用場</h2>
-  <p class="sub" data-t="aboutText">Daive AI Studio 專注於 AI 人物視覺、內容製作與實用工作流程。重視真實操作、清楚步驟與可驗證成果，依照每個需求與設備條件評估可行性。</p>
- </div>
- <div class="note" data-t="note">
-  <strong>合作前請準備</strong><br>
-  請描述想完成的結果、使用的軟體／模型、電腦配置，以及遇到的錯誤或困難。免費本地方案仍可能受硬體、模型授權與軟體版本限制；實際可行性與服務範圍會在了解需求後確認。
- </div>
+<div>
+<div class="kicker">ABOUT DAIVE</div>
+<h2 data-zh="讓 AI 不只看起來厲害，而是真的派得上用場"
+data-en="Make AI Useful, Not Just Impressive">
+讓 AI 不只看起來厲害，而是真的派得上用場
+</h2>
+<p class="sub"
+data-zh="Daive AI Studio 專注於 AI 人物視覺、內容製作與實用工作流程。重視真實操作、清楚步驟與可驗證成果，依照每個需求與設備條件評估可行性。"
+data-en="Daive AI Studio focuses on AI character visuals, content production and practical workflows. We value real operation, clear steps and verifiable results, assessing feasibility based on each request and hardware setup.">
+Daive AI Studio 專注於 AI 人物視覺、內容製作與實用工作流程。重視真實操作、清楚步驟與可驗證成果，依照每個需求與設備條件評估可行性。
+</p>
+</div>
+
+<div class="note">
+<strong data-zh="合作前請準備" data-en="Before Contacting Us">合作前請準備</strong><br>
+<span data-zh="請描述想完成的結果、使用的軟體／模型、電腦配置，以及遇到的錯誤或困難。免費本地方案仍可能受硬體、模型授權與軟體版本限制；實際可行性與服務範圍會在了解需求後確認。"
+data-en="Please describe your target result, software and models, computer specifications and current issue. Free local solutions may still have hardware, model licensing and software version limitations. Feasibility and service scope will be confirmed after reviewing your request.">
+請描述想完成的結果、使用的軟體／模型、電腦配置，以及遇到的錯誤或困難。免費本地方案仍可能受硬體、模型授權與軟體版本限制；實際可行性與服務範圍會在了解需求後確認。
+</span>
+</div>
 </section>
 
 <section class="section" id="contact">
- <div class="cta">
-  <div>
-   <div class="kicker">LET'S SOLVE IT</div>
-   <h2 data-t="contactTitle">你現在卡在哪個環節？</h2>
-   <p data-t="contactText">把問題、截圖或參考成果寄給我們，一起確認下一步怎麼做。</p>
-  </div>
-  <a class="btn" href="mailto:songjack1990@gmail.com?subject=Daive%20AI%20Project%20Inquiry" data-t="contactBtn">描述我的問題</a>
- </div>
+<div class="cta">
+<div>
+<div class="kicker">LET'S SOLVE IT</div>
+<h2 data-zh="你現在卡在哪個環節？" data-en="Where Are You Getting Stuck?">你現在卡在哪個環節？</h2>
+<p data-zh="把問題、截圖或參考成果寄給我們，一起確認下一步怎麼做。"
+data-en="Send us your issue, screenshots or reference results so we can identify a practical next step.">
+把問題、截圖或參考成果寄給我們，一起確認下一步怎麼做。
+</p>
+</div>
+<a class="btn" href="mailto:songjack1990@gmail.com?subject=Daive%20AI%20Project%20Inquiry"
+data-zh="描述我的問題" data-en="Describe My Issue">描述我的問題</a>
+</div>
 </section>
+
 </main>
 
 <footer>
- <div>© 2026 Daive AI Studio. All rights reserved.</div>
- <p>
-  <a href="privacy.html" data-t="privacy">隱私權政策</a>
-  <a href="terms.html" data-t="terms">服務條款</a>
-  <a href="refund.html" data-t="refund">退款政策</a>
-  <a href="mailto:songjack1990@gmail.com" data-t="support">聯絡支援</a>
- </p>
- <div>Email: songjack1990@gmail.com</div>
- <p class="small" data-t="footnote">所有專案依實際需求、技術條件與確認範圍執行。免費工具與本地模型仍可能有硬體及授權限制。</p>
+<div>© 2026 Daive AI Studio. All rights reserved.</div>
+<p>
+<a href="privacy.html" data-zh="隱私權政策" data-en="Privacy Policy">隱私權政策</a>
+<a href="terms.html" data-zh="服務條款" data-en="Terms of Service">服務條款</a>
+<a href="refund.html" data-zh="退款政策" data-en="Refund Policy">退款政策</a>
+<a href="mailto:songjack1990@gmail.com" data-zh="聯絡支援" data-en="Contact Support">聯絡支援</a>
+</p>
+<div>Email: songjack1990@gmail.com</div>
+<p class="small"
+data-zh="所有專案依實際需求、技術條件與確認範圍執行。免費工具與本地模型仍可能有硬體及授權限制。"
+data-en="Projects are handled according to confirmed requirements, technical feasibility and scope. Free tools and local models may have hardware and licensing limitations.">
+所有專案依實際需求、技術條件與確認範圍執行。免費工具與本地模型仍可能有硬體及授權限制。
+</p>
 </footer>
+
 </div>
+
 <script>
-const english = {
-nav1:"Solutions",nav2:"Workflow",nav3:"About",nav4:"Contact",
-lead:"From realistic skin details and clothing edits to ComfyUI workflow optimization. We tackle unnatural results, repeated generations, configuration errors and high production costs. We prioritize free local tools where practical.",
-cta1:"Explore Practical Solutions",cta2:"Contact Us",
-micro:"Start with the real problem. Review your hardware, tools and goals before proposing a practical approach.",
-solTitle:"Practical solutions to the AI problems you actually face",
-solSub:"More than impressive demos. We focus on improving results, reducing trial and error, and making workflows usable.",
-c1t:"Realistic AI Portrait Refinement",
-c1p:"Improve plastic-looking skin, artificial faces, excessive smoothing, distorted features and unnatural skin texture for more photographic results.",
-c1a:"Natural pores",c1b:"Realistic skin",c1c:"Less AI look",
-c2t:"AI Character & Clothing Editing",
-c2p:"Improve unnatural outfit changes, distorted fabric texture, incorrect folds, body proportions and inconsistent lighting.",
-c2a:"Clothing details",c2b:"Better proportions",c2c:"Natural blending",
-c3t:"ComfyUI Workflow Optimization",
-c3p:"Troubleshoot poor AI face results, node errors, model setup, parameters, VRAM limits and repeated generations.",
-c3a:"Node troubleshooting",c3b:"Parameter tuning",c3c:"Less trial and error",
-c4t:"Free Local AI & Cost Control",
-c4p:"Prioritize free tools and local models where suitable, reducing cloud credits, subscriptions and wasted generations.",
-c4a:"Local execution",c4b:"Lower costs",c4c:"Hardware assessment",
-processTitle:"Find the cause before changing the setup",
-processSub:"Avoid blindly downloading models, installing nodes or generating again and again. Review your setup and target first, then define practical steps.",
-s1t:"01 · Share the issue and goal",
-s1p:"Describe the result you want, your tools and hardware, and include screenshots or error messages.",
-s2t:"02 · Assess a workable approach",
-s2p:"Review models, software versions, VRAM and workflow limitations to define the scope.",
-s3t:"03 · Implement, test and deliver",
-s3p:"Carry out the agreed production, setup or troubleshooting and provide essential instructions.",
-aboutTitle:"Make AI useful—not just impressive",
-aboutText:"Daive AI Studio focuses on AI character visuals, content production and practical workflows. We value real operation, clear steps and verifiable results, assessing feasibility against each request and hardware setup.",
-note:"<strong>Before contacting us</strong><br>Describe your target result, software and models, computer specifications and current issue. Free local solutions may still have hardware, model-license and software-version limitations. Feasibility and scope are confirmed after reviewing your request.",
-contactTitle:"Where are you getting stuck?",
-contactText:"Send us the issue, screenshots or a reference result so we can identify a practical next step.",
-contactBtn:"Describe My Issue",
-privacy:"Privacy Policy",terms:"Terms of Service",refund:"Refund Policy",support:"Contact Support",
-footnote:"Projects are handled according to confirmed requirements, technical feasibility and scope. Free tools and local models may have hardware and licensing limitations."
-};
+(function(){
+const button=document.getElementById("langBtn");
+let language="zh";
 
-const chinese = {
-nav1:"解決方案",nav2:"工作流程",nav3:"關於我們",nav4:"聯絡",
-lead:"從人物皮膚細節、服裝編輯，到 ComfyUI 工作流程優化。解決 AI 製作中的不自然、反覆抽圖、配置錯誤與高成本問題。優先採用免費本地工具，讓製作更穩定、更有效率。",
-cta1:"探索實作解決方案",cta2:"聯絡我們",
-micro:"以實際問題為起點，先確認設備、工具與需求，再評估可行方案。",
-solTitle:"你遇到的 AI 製作難題，我們逐項拆解",
-solSub:"不只展示生成結果，更重視如何改善問題、減少試錯，讓流程真正能夠使用。",
-c1t:"AI 人物真實感修復",
-c1p:"改善 AI 塑膠皮膚、假面感、過度磨皮、五官失真與皮膚紋理不自然，讓人物畫面更接近真實攝影。",
-c1a:"自然毛孔",c1b:"真實膚質",c1c:"減少 AI 味",
-c2t:"AI 人物與服裝精細編輯",
-c2p:"改善換裝不自然、布料紋理失真、衣服褶皺錯誤、人物比例不協調與光影不一致。",
-c2a:"服裝細節",c2b:"比例協調",c2c:"自然融合",
-c3t:"ComfyUI 工作流程優化",
-c3p:"處理 AI 臉部效果不佳、節點報錯、模型配置、參數調整、顯存限制與反覆抽圖等問題。",
-c3a:"節點排錯",c3b:"參數優化",c3c:"減少試錯",
-c4t:"免費本地化與低成本製作",
-c4p:"優先評估免費工具與本地模型，減少雲端積分、訂閱費和重複生成造成的成本浪費。",
-c4a:"本地運行",c4b:"降低成本",c4c:"設備評估",
-processTitle:"先找出問題，再決定怎麼處理",
-processSub:"避免盲目下載模型、安裝節點或反覆抽圖。先確認目前環境與目標，再制定可執行的處理步驟。",
-s1t:"01 · 提供問題與目標",
-s1p:"描述想要的效果、目前使用的工具、設備配置，並附上截圖或錯誤訊息。",
-s2t:"02 · 評估可行方案",
-s2p:"檢查模型、軟體版本、顯存與工作流程限制，確認處理範圍。",
-s3t:"03 · 實作、測試與交付",
-s3p:"依確認內容進行製作、設定或排錯，並提供必要的操作說明。",
-aboutTitle:"讓 AI 不只看起來厲害，而是真的派得上用場",
-aboutText:"Daive AI Studio 專注於 AI 人物視覺、內容製作與實用工作流程。重視真實操作、清楚步驟與可驗證成果，依照每個需求與設備條件評估可行性。",
-note:"<strong>合作前請準備</strong><br>請描述想完成的結果、使用的軟體／模型、電腦配置，以及遇到的錯誤或困難。免費本地方案仍可能受硬體、模型授權與軟體版本限制；實際可行性與服務範圍會在了解需求後確認。",
-contactTitle:"你現在卡在哪個環節？",
-contactText:"把問題、截圖或參考成果寄給我們，一起確認下一步怎麼做。",
-contactBtn:"描述我的問題",
-privacy:"隱私權政策",terms:"服務條款",refund:"退款政策",support:"聯絡支援",
-footnote:"所有專案依實際需求、技術條件與確認範圍執行。免費工具與本地模型仍可能有硬體及授權限制。"
-};
+function setLanguage(next){
+language=next;
+document.documentElement.lang=language==="en"?"en":"zh-Hant";
 
-let currentLanguage = "zh";
-
-document.getElementById("langBtn").addEventListener("click", function(){
- currentLanguage = currentLanguage === "zh" ? "en" : "zh";
- const words = currentLanguage === "en" ? english : chinese;
-
- document.documentElement.lang =
-  currentLanguage === "en" ? "en" : "zh-Hant";
-
- document.querySelectorAll("[data-t]").forEach(function(element){
-  const key = element.getAttribute("data-t");
-  if(words[key] !== undefined){
-   element.innerHTML = words[key];
-  }
- });
-
- this.textContent = currentLanguage === "en" ? "繁體中文" : "EN";
+document.querySelectorAll("[data-zh][data-en]").forEach(function(el){
+el.textContent=el.getAttribute(language==="en"?"data-en":"data-zh");
 });
+
+button.textContent=language==="en"?"繁體中文":"EN";
+
+document.title=language==="en"
+?"Daive AI Studio | Practical AI Solutions"
+:"Daive AI Studio｜AI 實用解決方案";
+}
+
+button.addEventListener("click",function(){
+setLanguage(language==="zh"?"en":"zh");
+});
+
+setLanguage("zh");
+})();
 </script>
+
 </body>
 </html>
